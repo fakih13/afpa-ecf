@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="product.css" />
+    <link rel="stylesheet" href="header.css" />
+    <script src="header.js" defer></script>
+    <script src="product.js" defer></script>
+    <script src="cart.js" defer></script>
+    <title>Angel by EWS - Mug Angel</title>
+  </head>
+  <body>
+    <header>
+      <!-- logo et boutton menu -->
+      <div class="menu">
+        <button id="buttonMenu">
+          <span></span>
+          <span></span>
+        </button>
+        <img
+          id="logoAngel"
+          src="/images/angel-1300048.svg"
+          alt="logo Angel par Eros World Society"
+        />
+      </div>
+      <div id="listMenu">
+        <button id="closeMenu">X</button>
+        <ul id="leMenu">
+          <li>T-shirt</li>
+          <li>
+            Maillot
+            <ul class="sousMenu">
+              <li>Rugby Marseille XIII Avenir</li>
+              <li>Sharks XIII</li>
+            </ul>
+          </li>
+          <li>Mugs</li>
+        </ul>
+      </div>
+      <div class="searchHighScreen">
+        <label for="search">Rechercher</label>
+        <input type="text" id="search" />
+      </div>
+      <!-- icons header -->
+      <div class="icons">
+        <img id="searchIcon" src="/images/search_icon.svg" alt="" srcset="" />
+        <img id="userIcon" src="/images/person_icon.svg" alt="" srcset="" />
+        <img id="shopIcon" src="/images/shopping_icon.svg" alt="" srcset="" />
+      </div>
+    </header>
+    <main>
+      <div class="produitContainer">
+        <img
+          id="imgProduit"
+          src="/images/mug-angel.png"
+          alt="mug mug-ameriendien-1"
+        />
+        <div class="infoProduit">
+          <div class="produitData">
+            <h2 id="nameProduct">Mug Angel by EWS</h2>
+            <span>15€</span>
+          </div>
+          <p id="ficheProduit">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged.
+          </p>
+          <div class="quantity">
+            <span>Quantité :</span>
+            <span id="QuantityNumber">1</span>
+            <button id="lessQuantity">-</button>
+            <button id="moreQuantity">+</button>
+            <!-- <span
+              >Quantité :
+              <input
+                type="number"
+                name="produitQuantity"
+                id="produitQuantity"
+                value="0"
+                min="0"
+              />
+            </span> -->
+          </div>
+          <p id="exemplaires">Il reste <span id="stock">15</span> exemplaires</p>
+          <button id="ajoutPanier">Ajouter au panier</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

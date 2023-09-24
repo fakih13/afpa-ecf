@@ -1,0 +1,65 @@
+.produitContainer {
+    padding: 10px;
+}
+
+.produitData {
+    display: flex;
+    align-items: start;
+    gap: 100px;
+    padding-right: 20px;
+}
+
+.produitData span {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.produitData h2 {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+#imgProduit {
+    width: 210px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+#exemplaires {
+    font-weight: 900;
+    font-family: 'Inter', sans-serif;
+}
+
+#ajoutPanier{
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 6px;
+    background: #000;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #fff;
+}
+
+#produitQuantity{
+    background-color: #000;
+    color: #fff;
+    width: 60px;
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    width: 200px !important;
+}
+
+#QuantityNumber{
+    background: #000;
+    color: #fff;
+    padding: 3px;
+}

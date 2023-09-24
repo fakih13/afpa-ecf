@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap');
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .menu #buttonMenu {
+    background: 0;
+    border: 0;
+}
+
+header .menu #buttonMenu:hover {
+    cursor: pointer;
+}
+
+header .menu #buttonMenu span:first-child {
+    display: block;
+    width: 49px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+
+header .menu #buttonMenu span:last-child {
+    display: block;
+    width: 20px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+
+header .menu #logoAngel {
+    width: 40px;
+    height: 46px;
+}
+
+header .menu #logoAngel:hover {
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+}
+
+header #listMenu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #a9a9a9;
+    color: #000;
+    z-index: 3;
+    list-style: none;
+    margin: auto;
+}
+
+header #listMenu>ul {
+    margin-right: auto;
+    margin-left: auto;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 0;
+    margin: 0;
+    transform: translate(-50%, -50%);
+}
+
+header #listMenu>#leMenu>li {
+    font-size: 5rem;
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+    
+}
+
+header .sousMenu{
+    font-size: 2rem;
+    overflow-wrap: break-word;
+    inline-size: 200px;
+}
+
+header .sousMenu>li{
+    padding-top: 1.5px;
+    padding-bottom: 10px;
+}
+
+header #leMenu>li:hover{
+    color: #fff;
+    cursor: pointer;
+}
+
+header .sousMenu>li:hover{
+    color: #ff0101;
+    cursor: pointer;
+}
+
+header #listMenu #closeMenu{
+    background: none;
+    border: none;
+    color: red;
+    font-size: 80px;
+    display: block;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    cursor: pointer;
+}
+
+/* header #listMenu li .sousMenu {
+    position: absolute;
+    opacity: 0;
+    z-index: -999;
+}
+
+header #listMenu li:hover .sousMenu {
+    opacity: 1;
+    z-index: 1;
+    left: 140px;
+    top: 0;
+} */
+
+header .icons {
+    padding-right: 6px;
+}
+
+header .icons img {
+    padding: 4px;
+    width: 24px;
+}
+
+header .icons img:hover {
+    cursor: pointer;
+}
+
+header #search {
+    border: 0;
+    border-bottom: 2px solid black;
+}
+
+header #search:focus {
+    outline: 0;
+}
+
+@media screen and (max-width:768px) {
+    .searchHighScreen {
+        display: none;
+    }
+}
+@media screen and (min-width:769px) {
+    #searchIcon {
+        display: none;
+    }
+}
