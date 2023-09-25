@@ -7,8 +7,6 @@
 // window.localStorage.setItem('panier', JSON.stringify(panier));
 
 if (!window.localStorage.getItem('panier')) {
-  const panier = {
-    produit: [],
-  };
+  const panier = [];
   window.localStorage.setItem('panier', JSON.stringify(panier));
 }

@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="product.css" />
     <link rel="stylesheet" href="header.css" />
     <script src="header.js" defer></script>
-    <script src="product.js" defer></script>
     <script src="cart.js" defer></script>
+    <script src="product.js" defer></script>
     <title>Angel by EWS - Mug Angel</title>
   </head>
   <body>
@@ -50,6 +50,10 @@
       </div>
     </header>
     <main>
+      <div class="navigation">
+        <a href="#categorie" id="categorie">Mug</a>
+        <a href="#sousCategorie" id="sousCategorie">Mug angel</a>
+      </div>
       <div class="produitContainer">
         <img
           id="imgProduit"
@@ -59,7 +63,7 @@
         <div class="infoProduit">
           <div class="produitData">
             <h2 id="nameProduct">Mug Angel by EWS</h2>
-            <span>15€</span>
+            <span><span id="priceProduct">15</span>€</span>
           </div>
           <p id="ficheProduit">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -85,7 +89,9 @@
               />
             </span> -->
           </div>
-          <p id="exemplaires">Il reste <span id="stock">15</span> exemplaires</p>
+          <p id="exemplaires">
+            Il reste <span id="stock">15</span> exemplaires
+          </p>
           <button id="ajoutPanier">Ajouter au panier</button>
         </div>
       </div>

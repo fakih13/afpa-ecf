@@ -1,5 +1,6 @@
 let nameProdcut = document.getElementById('nameProduct').textContent;
 
+let priceProduct = Number(document.getElementById('priceProduct').textContent);
 // Gestion quantité
 
 let quantity = document.getElementById('QuantityNumber');
@@ -11,22 +12,13 @@ let stock = document.getElementById('stock').textContent;
 let lessQuantity = document.getElementById('lessQuantity');
 let moreQuantity = document.getElementById('moreQuantity');
 
-console.log(quantityNumber)
-console.log(stock)
-
 moreQuantity.addEventListener('click', () => {
   if (quantityNumber < stock) {
-    let plus = 1+ quantityNumber++;
+    let plus = 1 + quantityNumber++;
     quantity.innerHTML = plus;
-    return quantityNumber
+    return quantityNumber;
   }
-  
 });
-
-
-
-
-
 
 lessQuantity.addEventListener('click', () => {
   if (quantityNumber > 1) {
@@ -49,14 +41,18 @@ let vPanier = JSON.parse(panier);
 
 // ajout dans l'objet panier du produit et de la quantité
 buttonPanier.addEventListener('click', () => {
-  if (!vPanier.produit.includes(produit)) {
-    vPanier.produit.push(produit);
+  produit.quantité = quantityNumber;
+  produit.prix = priceProduct * quantityNumber;
+  let index = vPanier.findIndex((e) => e.nom == produit.nom);
+  console.log(index);
+  // si le produit est dèjà présent faire un update
+  if (index !== -1) {
+    vPanier[index].quantité = produit.quantité; 
+  } else {
+    vPanier.push(produit);
   }
-  
-  // créer un objet du produit avec le nom et la quantité et ajouter dans le tableau produit du panier
-  console.log(vPanier.produit);
+  localStorage.setItem('panier', JSON.stringify(vPanier));
 });
-
 
 /*
 
