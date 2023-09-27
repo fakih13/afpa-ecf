@@ -1,0 +1,60 @@
+*{
+    font-family: 'Inter', sans-serif;
+}
+#validation {
+    display: block;
+    margin: auto;
+    padding: 16px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border: solid black 1px;
+    border-radius: 6px;
+    background: black;
+    color: #fff;
+    font-weight: 600;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 60px;
+}
+
+.shipSubInfo {
+    display: flex;
+    gap: 23px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.subInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+.subInfo input {
+    width: 125px;
+    height: 40px;
+    border-radius: 6px;
+    border: solid black 1px;
+}
+
+#ship, #facturation, #telephone {
+    margin-top: 10px;
+    width: 280px;
+    height: 40px;
+    border-radius: 6px;
+    border: solid black 1px;
+}
+
+.similary{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+label{
+    text-align: start;
+}
