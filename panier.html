@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="product.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="panier.css">
+    <script src="header.js" defer></script>
+    <script src="cart.js" defer></script>
+    <title>Angel by EWS - Mug Angel</title>
+  </head>
+  <body>
+    <header>
+      <!-- logo et boutton menu -->
+      <div class="menu">
+        <button id="buttonMenu">
+          <span></span>
+          <span></span>
+        </button>
+        <img
+          id="logoAngel"
+          src="/images/angel-1300048.svg"
+          alt="logo Angel par Eros World Society"
+        />
+      </div>
+      <div id="listMenu">
+        <button id="closeMenu">X</button>
+        <ul id="leMenu">
+          <li>T-shirt</li>
+          <li>
+            Maillot
+            <ul class="sousMenu">
+              <li>Rugby Marseille XIII Avenir</li>
+              <li>Sharks XIII</li>
+            </ul>
+          </li>
+          <li>Mugs</li>
+        </ul>
+      </div>
+      <div class="searchHighScreen">
+        <label for="search">Rechercher</label>
+        <input type="text" id="search" />
+      </div>
+      <!-- icons header -->
+      <div class="icons">
+        <img id="searchIcon" src="/images/search_icon.svg" alt="" srcset="" />
+        <img id="userIcon" src="/images/person_icon.svg" alt="" srcset="" />
+        <img id="shopIcon" src="/images/shopping_icon.svg" alt="" srcset="" />
+      </div>
+    </header>
+    <main>
+        <h2 id="titlePage">Panier</h2>
+        <div class="containerPanier">
+          <div class="containerProduct">
+            <img id="imgProduct" src="/images/mug-angel.png" alt="mug angel">
+            <div class="containerInfo">
+              <div class="info">
+                <h3 id="nameProduct">Mug Angel</h3>
+                <span id="priceProduct">15€</span>
+              </div>
+              <div class="quantity">
+                <div class="quantityContainer">
+                  <p>Quantité:</p>
+                  <span id="quantityProduct">1</span>
+                </div>
+                <a href="#delete" id="delete">supprimer</a>
+              </div>
+            </div>
+          </div>
+
+          <p id="sousTotal">Sous-total : 15€</p>
+          <div class="promo">
+            <p>Code promo:</p>
+            <input id="addPromo" type="text" placeholder="Un code promotionnel ?">
+          </div>
+          <p id="horsTaxe"> Total HT: <span id="prixHt">12€</span></p>
+          <p id="ttc"> Total HT: <span id="prixTtc">15€</span></p>
+          <button id="facturation">Facturation</button>
+        </div>
+    </main>
+  </body>
+</html>

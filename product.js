@@ -44,7 +44,6 @@ buttonPanier.addEventListener('click', () => {
   produit.quantité = quantityNumber;
   produit.prix = priceProduct * quantityNumber;
   let index = vPanier.findIndex((e) => e.nom == produit.nom);
-  console.log(index);
   // si le produit est dèjà présent faire un update
   if (index !== -1) {
     vPanier[index].quantité = produit.quantité; 
