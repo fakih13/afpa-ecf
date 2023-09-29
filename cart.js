@@ -1,30 +1,27 @@
-/**
- * Créer dans le local storage un objet panier
- *
- *
- */
-
-// window.localStorage.setItem('panier', JSON.stringify(panier));
-
-
-
-let thePanier = function(){
-  this.panierExist = function() {
-    if (!window.localStorage.getItem('panier')) {
-      const panier = [];
-      window.localStorage.setItem('panier', JSON.stringify(panier));
-      console.log('création')
+class Panier{
+  constructor(panier){
+    this.panier = panier
+  }
+  panierExist = function() {
+    if (!window.localStorage.getItem(this.panier)) {
+      const newPanier = [];
+      window.localStorage.setItem('panier', JSON.stringify(newPanier));
+      console.log(newPanier)
+      this.panier = newPanier
+      return this.newPanier
     } else {
-      const panier = window.localStorage.getItem('panier');
-      console.log('exist')
+      this.panier = window.localStorage.getItem(this.panier);
+      console.log(this.panier)
+      return this.panier
     }
+  }
+  deletePanier = function() {
+    if (!window.localStorage.getItem(this.panier)) window.localStorage.removeItem(this.panier)
   }
 }
 
+const recup = 'panier'
 
+const thePanier = new Panier(recup)
 
-
-
-let recupPanier = new thePanier()
-
-recupPanier.panierExist()
+thePanier.panierExist()
