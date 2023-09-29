@@ -1,6 +1,7 @@
-*{
+* {
     font-family: 'Inter', sans-serif;
 }
+
 #validation {
     display: block;
     margin: auto;
@@ -24,37 +25,67 @@
     margin-top: 60px;
 }
 
-.shipSubInfo {
+#pro {
+    display: none;
+    flex-direction: column;
+}
+
+#btob{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.shipSubInfo,
+#identificationContainer {
     display: flex;
     gap: 23px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.subInfo{
+.subInfo,
+.identification {
     display: flex;
     flex-direction: column;
 }
 
-.subInfo input {
+.subInfo input,
+.identification input {
     width: 125px;
     height: 40px;
     border-radius: 6px;
     border: solid black 1px;
+    margin-top: 6px;
 }
 
-#ship, #facturation, #telephone {
+#ship,
+#facturationAdresse,
+#telephone,
+#nomPro,
+#siret {
     margin-top: 10px;
+    margin-bottom: 10px;
     width: 280px;
     height: 40px;
     border-radius: 6px;
     border: solid black 1px;
+    padding: 6px;
 }
 
-.similary{
+#siret{
+    margin-top: 10px;
+}
+
+.similary {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-label{
+
+#facturation {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
     text-align: start;
 }

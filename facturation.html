@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="facturation.css" />
     <script src="header.js" defer></script>
     <script src="cart.js" defer></script>
+    <script src="facturation.js" defer></script>
     <title>Angel by EWS - Mug Angel</title>
   </head>
   <body>
@@ -51,6 +52,26 @@
     <main>
       <div class="container">
         <h2 id="titlePage">Facturation</h2>
+        <div id="identificationContainer">
+          <div class="identification">
+            <label for="nom">nom</label>
+            <input type="text" name="nom" id="nom" />
+          </div>
+          <div class="identification">
+            <label for="prenom">prenom</label>
+            <input type="text" name="prenom" id="prenom" />
+          </div>
+        </div>
+        <div id="btob">
+          <label for="society">Entreprise ou Association</label>
+          <input type="checkbox" name="society" id="society" />
+        </div>
+        <div id="pro">
+          <label for="nomPro">Dénomination Sociale</label>
+          <input type="text" name="nomPro" id="nomPro" />
+          <label for="siret">siret</label>
+          <input type="number" name="siret" id="siret" />
+        </div>
         <label for="ship">Adresse de Livraison</label>
         <input name="ship" id="ship" type="text" />
         <div class="shipSubInfo">
@@ -69,22 +90,28 @@
           <label for="same"
             >L'adresse de livraison et de facturation est la même</label
           >
-          <input type="checkbox" name="same" id="same" />
+          <input type="checkbox" name="same" id="same"/>
         </div>
-        <label for="facturation">Adresse de facturation</label>
-        <input name="facturation" id="facturation" type="text" />
-        <div class="shipSubInfo">
-          <div class="subInfo">
-            <label for="city">Ville</label>
-            <input name="facturationCity" id="facturationCity" type="text" />
-          </div>
-          <div class="subInfo">
-            <label for="postal">Code postal</label>
-            <input
-              name="facturationPostal"
-              id="facturationPostal"
-              type="text"
-            />
+        <div id="facturation">
+          <label for="facturationAdresse">Adresse de facturation</label>
+          <input
+            name="facturationAdresse"
+            id="facturationAdresse"
+            type="text"
+          />
+          <div class="shipSubInfo">
+            <div class="subInfo">
+              <label for="city">Ville</label>
+              <input name="facturationCity" id="facturationCity" type="text" />
+            </div>
+            <div class="subInfo">
+              <label for="postal">Code postal</label>
+              <input
+                name="facturationPostal"
+                id="facturationPostal"
+                type="text"
+              />
+            </div>
           </div>
         </div>
       </div>
