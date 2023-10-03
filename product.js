@@ -36,7 +36,7 @@ let produit = {
 
 let buttonPanier = document.getElementById('ajoutPanier');
 
-let panier = window.localStorage.getItem('panier');
+let panier = window.sessionStorage.getItem('panier');
 let vPanier = JSON.parse(panier);
 
 // ajout dans l'objet panier du produit et de la quantité
@@ -50,27 +50,5 @@ buttonPanier.addEventListener('click', () => {
   } else {
     vPanier.push(produit);
   }
-  localStorage.setItem('panier', JSON.stringify(vPanier));
+  sessionStorage.setItem('panier', JSON.stringify(vPanier));
 });
-
-/*
-
-moreQuantity.addEventListener('click', () => {
-  let quantity = Number(QuantityNumber.textContent);
-  console.log(stock);
-  if (quantity < stock) {
-    let plus = quantity + 1;
-    quantityNumber.innerHTML = plus;
-  }
-});
-lessQuantity.addEventListener('click', () => {
-  let quantity = Number(QuantityNumber.textContent);
-  if (quantity > 1) {
-    let moins = quantity - 1;
-    quantityNumber.innerHTML = moins;
-  }
-});
-
-
-
-*/

@@ -3,20 +3,20 @@ class Panier{
     this.panier = panier
   }
   panierExist = function() {
-    if (!window.localStorage.getItem(this.panier)) {
+    if (!window.sessionStorage.getItem(this.panier)) {
       const newPanier = [];
-      window.localStorage.setItem('panier', JSON.stringify(newPanier));
+      window.sessionStorage.setItem('panier', JSON.stringify(newPanier));
       console.log(newPanier)
       this.panier = newPanier
       return this.newPanier
     } else {
-      this.panier = window.localStorage.getItem(this.panier);
+      this.panier = window.sessionStorage.getItem(this.panier);
       console.log(this.panier)
       return this.panier
     }
   }
   deletePanier = function() {
-    if (!window.localStorage.getItem(this.panier)) window.localStorage.removeItem(this.panier)
+    if (!window.sessionStorage.getItem(this.panier)) window.sessionStorage.removeItem(this.panier)
   }
 }
 
