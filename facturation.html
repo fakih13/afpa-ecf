@@ -72,25 +72,27 @@
           <label for="siret">siret</label>
           <input type="number" name="siret" id="siret" />
         </div>
-        <label for="ship">Adresse de Livraison</label>
-        <input name="ship" id="ship" type="text" />
-        <div class="shipSubInfo">
-          <div class="subInfo">
-            <label for="city">Ville</label>
-            <input name="city" id="city" type="text" />
-          </div>
-          <div class="subInfo">
-            <label for="postal">Code postal</label>
-            <input name="postal" id="postal" type="text" />
+        <div id="delivery">
+          <label for="ship">Adresse de Livraison</label>
+          <input name="ship" id="ship" type="text" />
+          <div class="shipSubInfo">
+            <div class="subInfo">
+              <label for="city">Ville</label>
+              <input name="city" id="city" type="text" />
+            </div>
+            <div class="subInfo">
+              <label for="postal">Code postal</label>
+              <input name="postal" id="postal" type="text" />
+            </div>
           </div>
         </div>
         <label for="telephone">Téléphone</label>
         <input name="telephone" id="telephone" type="text" />
         <div class="similary">
           <label for="same"
-            >L'adresse de livraison et de facturation est la même</label
+            >L'adresse de livraison et de facturation n'est pas la même</label
           >
-          <input type="checkbox" name="same" id="same"/>
+          <input type="checkbox" name="same" id="same" />
         </div>
         <div id="facturation">
           <label for="facturationAdresse">Adresse de facturation</label>

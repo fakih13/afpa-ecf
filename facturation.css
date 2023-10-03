@@ -35,6 +35,11 @@
     margin-bottom: 20px;
 }
 
+.delivery{
+    display: flex;
+    flex-direction: column;
+}
+
 .shipSubInfo,
 #identificationContainer {
     display: flex;
@@ -82,7 +87,7 @@
 }
 
 #facturation {
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
