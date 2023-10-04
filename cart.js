@@ -11,7 +11,7 @@ class Panier{
       return this.newPanier
     } else {
       this.panier = window.sessionStorage.getItem(this.panier);
-      console.log(this.panier)
+
       return this.panier
     }
   }

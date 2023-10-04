@@ -25,8 +25,13 @@
     margin-top: 60px;
 }
 
-#pro {
+.noVisibilty {
     display: none;
+    flex-direction: column;
+}
+
+.visibility {
+    display: flex !important;
     flex-direction: column;
 }
 
@@ -86,10 +91,8 @@
     margin-bottom: 20px;
 }
 
-#facturation {
-    display: none;
-    flex-direction: column;
-}
+
+
 
 label {
     text-align: start;
@@ -102,4 +105,8 @@ label {
     color: red;
     font-weight: 900;
     font-size: 1.1em;
+}
+
+.invalid {
+    border: 2px solid red !important;
 }
