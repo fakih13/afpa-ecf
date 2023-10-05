@@ -7,11 +7,11 @@
       name="description"
       content="L'univers d'Angel par Eros World Society"
     />
-    <link rel="stylesheet" href="header.css" />
-    <link rel="stylesheet" href="userModal.css" />
-    <link rel="stylesheet" href="404.css">
-    <script src="header.js" defer></script>
-    <script type="module" src="modal.js" defer></script>
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/userModal.css" />
+    <link rel="stylesheet" href="/css/404.css" />
+    <script src="/js/header.js" defer></script>
+    <script type="module" src="/js/modal.js" defer></script>
     <title>Angel by EWS</title>
   </head>
   <body>
@@ -33,27 +33,27 @@
       <div id="listMenu">
         <button id="closeMenu">X</button>
         <ul id="leMenu">
-          <li>T-shirt</li>
+          <li><a href="/produit/pending.html">T-shirt</a></li>
           <li>
-            Maillot
-            <ul class="sousMenu">
+            <a href="/produit/pending.html"> Maillot </a>
+            <ul id="sousMenu">
               <li>Rugby Marseille XIII Avenir</li>
               <li>Sharks XIII</li>
             </ul>
           </li>
-          <li>Mugs</li>
+          <li><a href="/produit/mugs/mugs.html">Mugs</a></li>
         </ul>
       </div>
       <form class="searchHighScreen" autocomplete="off">
         <label for="search">Rechercher</label>
-        <input type="search" id="search"/>
+        <input type="search" id="search" />
       </form>
       <!-- icons header -->
       <div class="icons">
         <img id="searchIcon" src="/images/search_icon.svg" alt="" srcset="" />
         <img id="userIcon" src="/images/person_icon.svg" alt="" srcset="" />
         <img id="shopIcon" src="/images/shopping_icon.svg" alt="" srcset="" />
-        <img src="/images/logout.svg" alt="deconnexion" id="deconnexion">
+        <img src="/images/logout.svg" alt="deconnexion" id="deconnexion" />
       </div>
     </header>
 
@@ -65,8 +65,20 @@
         <h4>Connexion</h4>
         <p>Saissez votre email et votre mot de passe</p>
         <div class="inputContainer">
-          <input type="email" name="emailConnect" id="emailConnect" placeholder="Email" autocomplete="username">
-          <input type="password" name="passwordConnect" id="passwordConnect" placeholder="Mot de passe" autocomplete="current-password">
+          <input
+            type="email"
+            name="emailConnect"
+            id="emailConnect"
+            placeholder="Email"
+            autocomplete="username"
+          />
+          <input
+            type="password"
+            name="passwordConnect"
+            id="passwordConnect"
+            placeholder="Mot de passe"
+            autocomplete="current-password"
+          />
         </div>
         <button id="btnConnect">Se connecter</button>
         <a href="inscription.html">Nouveau client? Créer un compte</a>

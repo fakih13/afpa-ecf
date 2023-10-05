@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="product.css" />
-    <link rel="stylesheet" href="header.css" />
-    <link rel="stylesheet" href="panier.css">
-    <script src="header.js" defer></script>
-    <script src="cart.js" defer></script>
+    <link rel="stylesheet" href="/css/product.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/panier.css">
+    <script src="/js/header.js" defer></script>
+    <script src="/js/cart.js" defer></script>
+    <script type="module" src="/js/modal.js" defer></script>
     <title>Angel by EWS - Mug Angel</title>
   </head>
   <body>
@@ -27,15 +28,15 @@
       <div id="listMenu">
         <button id="closeMenu">X</button>
         <ul id="leMenu">
-          <li>T-shirt</li>
+          <li><a href="/produit/pending.html">T-shirt</a></li>
           <li>
-            Maillot
-            <ul class="sousMenu">
+            <a href="/produit/pending.html"> Maillot </a>
+            <ul id="sousMenu">
               <li>Rugby Marseille XIII Avenir</li>
               <li>Sharks XIII</li>
             </ul>
           </li>
-          <li>Mugs</li>
+          <li><a href="/produit/mugs/mugs.html">Mugs</a></li>
         </ul>
       </div>
       <div class="searchHighScreen">

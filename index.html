@@ -33,27 +33,38 @@
       <div id="listMenu">
         <button id="closeMenu">X</button>
         <ul id="leMenu">
-          <li>T-shirt</li>
+          <!-- <li>T-shirt</li>
           <li>
-            Maillot
-            <ul class="sousMenu">
+            <a href="/produit/pending.html">
+              Maillot
+            </a>
+              <ul id="sousMenu">
+                <li>Rugby Marseille XIII Avenir</li>
+                <li>Sharks XIII</li>
+              </ul>
+          </li>
+          <li>Mugs</li> -->
+          <li><a href="/produit/pending.html">T-shirt</a></li>
+          <li>
+            <a href="/produit/pending.html"> Maillot </a>
+            <ul id="sousMenu">
               <li>Rugby Marseille XIII Avenir</li>
               <li>Sharks XIII</li>
             </ul>
           </li>
-          <li>Mugs</li>
+          <li><a href="/produit/mugs/mugs.html">Mugs</a></li>
         </ul>
       </div>
       <form class="searchHighScreen" autocomplete="off">
         <label for="search">Rechercher</label>
-        <input type="search" id="search"/>
+        <input type="search" id="search" />
       </form>
       <!-- icons header -->
       <div class="icons">
         <img id="searchIcon" src="/images/search_icon.svg" alt="" srcset="" />
         <img id="userIcon" src="/images/person_icon.svg" alt="" srcset="" />
         <img id="shopIcon" src="/images/shopping_icon.svg" alt="" srcset="" />
-        <img src="/images/logout.svg" alt="deconnexion" id="deconnexion">
+        <img src="/images/logout.svg" alt="deconnexion" id="deconnexion" />
       </div>
     </header>
 
@@ -65,8 +76,20 @@
         <h4>Connexion</h4>
         <p>Saissez votre email et votre mot de passe</p>
         <div class="inputContainer">
-          <input type="email" name="emailConnect" id="emailConnect" placeholder="Email" autocomplete="username">
-          <input type="password" name="passwordConnect" id="passwordConnect" placeholder="Mot de passe" autocomplete="current-password">
+          <input
+            type="email"
+            name="emailConnect"
+            id="emailConnect"
+            placeholder="Email"
+            autocomplete="username"
+          />
+          <input
+            type="password"
+            name="passwordConnect"
+            id="passwordConnect"
+            placeholder="Mot de passe"
+            autocomplete="current-password"
+          />
         </div>
         <button id="btnConnect">Se connecter</button>
         <a href="inscription.html">Nouveau client? Créer un compte</a>
@@ -75,7 +98,9 @@
     <main>
       <div id="newProduct">
         <h2>Nouveautés</h2>
-        <a id="collectionLink" href="#">Voir la collection</a>
+        <a id="collectionLink" href="/produit/mugs/mugs.html"
+          >Voir la collection</a
+        >
         <img id="newProductImg" src="images/mug-angel.png" alt="mug angel" />
       </div>
       <div class="collectionsHome">
@@ -83,11 +108,11 @@
           <img src="images/mug-ameriendien-1.png" alt="" />
           <h3>Mugs</h3>
         </a>
-        <a href="#" class="soloCollection">
+        <a href="/produit/pending.html" class="soloCollection">
           <img src="images/mug-cat.png" alt="" />
           <h3>Maillots</h3>
         </a>
-        <a href="#" class="soloCollection">
+        <a href="/produit/pending.html" class="soloCollection">
           <img src="images/mug-lion-mxiiia.png" alt="" />
           <h3>T-shirt</h3>
         </a>
