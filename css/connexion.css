@@ -1,0 +1,56 @@
+#connexionPage {
+    margin-top: 60px;
+    font-family: 'Inter', sans-serif;
+}
+
+#connexionPage h1{
+    display: block;
+    margin-bottom: 40px;
+}
+
+#connexionPage h2{
+    text-align: center;
+}
+
+#connexionPage #connect {
+    display: block;
+    color: black;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+#connexionPage .inputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#connexionPage input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+    height: 20px;
+    border-radius: 6px;
+    border: solid black 1px;
+    padding: 6px;
+}
+
+#connexionPage #btnValidate {
+    display: block;
+    margin: auto;
+    padding: 16px;
+    margin-top: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: solid black 1px;
+    border-radius: 6px;
+    color: #000000;
+    font-weight: 600;
+}
+
+@media screen and (min-width:768px) {
+    #connexionPage h1{
+        padding-left: 20%;
+    }
+}

@@ -51,4 +51,5 @@ buttonPanier.addEventListener('click', () => {
     vPanier.push(produit);
   }
   sessionStorage.setItem('panier', JSON.stringify(vPanier));
+  window.location.href = '/panier.html';
 });

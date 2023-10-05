@@ -133,6 +133,10 @@ header .icons img {
     width: 24px;
 }
 
+header .icons #deconnexion{
+    display: none;
+}
+
 header .icons img:hover {
     cursor: pointer;
 }

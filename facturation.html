@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="facturation.css" />
+    <link rel="stylesheet" href="userModal.css" />
     <script src="header.js" defer></script>
     <script src="cart.js" defer></script>
     <script src="facturation.js" defer></script>
+    <script type="module" src="modal.js" defer></script>
     <title>Angel by EWS - Mug Angel</title>
   </head>
   <body>
@@ -18,11 +20,13 @@
           <span></span>
           <span></span>
         </button>
-        <img
-          id="logoAngel"
-          src="/images/angel-1300048.svg"
-          alt="logo Angel par Eros World Society"
-        />
+        <a href="index.html">
+          <img
+            id="logoAngel"
+            src="/images/angel-1300048.svg"
+            alt="logo Angel par Eros World Society"
+          />
+        </a>
       </div>
       <div id="listMenu">
         <button id="closeMenu">X</button>
@@ -38,17 +42,46 @@
           <li>Mugs</li>
         </ul>
       </div>
-      <div class="searchHighScreen">
+      <form class="searchHighScreen" autocomplete="off">
         <label for="search">Rechercher</label>
         <input type="text" id="search" />
-      </div>
+      </form>
       <!-- icons header -->
       <div class="icons">
         <img id="searchIcon" src="/images/search_icon.svg" alt="" srcset="" />
         <img id="userIcon" src="/images/person_icon.svg" alt="" srcset="" />
         <img id="shopIcon" src="/images/shopping_icon.svg" alt="" srcset="" />
+        <img src="/images/logout.svg" alt="deconnexion" id="deconnexion">
       </div>
     </header>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <form class="modal-content">
+        <div class="close">&times;</div>
+        <h4>Connexion</h4>
+        <p>Saissez votre email et votre mot de passe</p>
+        <div class="inputContainer">
+          <input
+            type="email"
+            name="emailConnect"
+            id="emailConnect"
+            placeholder="Email"
+            autocomplete="username"
+          />
+          <input
+            type="password"
+            name="passwordConnect"
+            id="passwordConnect"
+            placeholder="Mot de passe"
+            autocomplete="current-password"
+          />
+        </div>
+        <button id="btnConnect">Se connecter</button>
+        <a href="inscription.html">Nouveau client? Créer un compte</a>
+      </form>
+    </div>
     <main>
       <div id="container">
         <h2 id="titlePage">Facturation</h2>
@@ -66,7 +99,7 @@
           <label for="society">Entreprise ou Association</label>
           <input type="checkbox" name="society" id="society" />
         </div>
-        <div id="pro" class="noVisibilty">
+        <div id="proContainer" class="noVisibilty">
           <label for="nomPro">Dénomination Sociale</label>
           <input type="text" name="nomPro" id="nomPro" />
           <label for="siret">siret</label>
@@ -94,7 +127,7 @@
           >
           <input type="checkbox" name="same" id="same" />
         </div>
-        <div id="facturation" class="noVisibilty">
+        <div id="facturationContainer" class="noVisibilty">
           <label for="facturationAdresse">Adresse de facturation</label>
           <input
             name="facturationAdresse"

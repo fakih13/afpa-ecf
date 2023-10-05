@@ -1,0 +1,14 @@
+h1{
+    display: block;
+    margin-top: 220px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+a{
+    display: block;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    color: #4f4f4f;
+    font-weight: 900;
+}

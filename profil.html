@@ -8,10 +8,11 @@
       content="L'univers d'Angel par Eros World Society"
     />
     <link rel="stylesheet" href="/css/header.css" />
-    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/profil.css" />
     <link rel="stylesheet" href="/css/userModal.css" />
     <script src="/js/header.js" defer></script>
     <script type="module" src="/js/modal.js" defer></script>
+    <script src="/js/profil.js"></script>
     <title>Angel by EWS</title>
   </head>
   <body>
@@ -22,7 +23,7 @@
           <span></span>
           <span></span>
         </button>
-        <a href="index.html">
+        <a href="/index.html">
           <img
             id="logoAngel"
             src="/images/angel-1300048.svg"
@@ -46,7 +47,7 @@
       </div>
       <form class="searchHighScreen" autocomplete="off">
         <label for="search">Rechercher</label>
-        <input type="search" id="search"/>
+        <input type="search" id="search" />
       </form>
       <!-- icons header -->
       <div class="icons">
@@ -65,38 +66,29 @@
         <h4>Connexion</h4>
         <p>Saissez votre email et votre mot de passe</p>
         <div class="inputContainer">
-          <input type="email" name="emailConnect" id="emailConnect" placeholder="Email" autocomplete="username">
-          <input type="password" name="passwordConnect" id="passwordConnect" placeholder="Mot de passe" autocomplete="current-password">
+          <input
+            type="email"
+            name="emailConnect"
+            id="emailConnect"
+            placeholder="Email"
+            autocomplete="username"
+          />
+          <input
+            type="password"
+            name="passwordConnect"
+            id="passwordConnect"
+            placeholder="Mot de passe"
+            autocomplete="current-password"
+          />
         </div>
         <button id="btnConnect">Se connecter</button>
         <a href="inscription.html">Nouveau client? Créer un compte</a>
       </form>
     </div>
-    <main>
-      <div id="newProduct">
-        <h2>Nouveautés</h2>
-        <a id="collectionLink" href="#">Voir la collection</a>
-        <img id="newProductImg" src="images/mug-angel.png" alt="mug angel" />
-      </div>
-      <div class="collectionsHome">
-        <a href="/produit/mugs/mugs.html" class="soloCollection">
-          <img src="images/mug-ameriendien-1.png" alt="" />
-          <h3>Mugs</h3>
-        </a>
-        <a href="#" class="soloCollection">
-          <img src="images/mug-cat.png" alt="" />
-          <h3>Maillots</h3>
-        </a>
-        <a href="#" class="soloCollection">
-          <img src="images/mug-lion-mxiiia.png" alt="" />
-          <h3>T-shirt</h3>
-        </a>
-      </div>
-      <div class="legalAnnonce">
-        <img src="images/angel-1300048.svg" alt="logo EWS" />
-        <a href="#">conditions générales de ventes</a>
-        <a href="#">mentions légales</a>
-      </div>
+    <main id="profilPage">
+      <a href="">Mes infos</a>
+      <a href="">Mes dernières commandes</a>
+      <span id="emailUser"></span>
     </main>
   </body>
 </html>

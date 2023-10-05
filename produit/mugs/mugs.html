@@ -3,12 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/product.css" />
+    <link rel="stylesheet" href="/css/collection.css" />
     <link rel="stylesheet" href="/css/header.css" />
     <link rel="stylesheet" href="/css/userModal.css" />
     <script src="/js/header.js" defer></script>
     <script src="/js/cart.js" defer></script>
-    <script src="/js/product.js" defer></script>
     <script type="module" src="/js/modal.js" defer></script>
     <title>Angel by EWS - Mug Angel</title>
   </head>
@@ -83,50 +82,61 @@
       </form>
     </div>
     <main>
-      <div class="navigation">
-        <a href="#categorie" id="categorie">Mug</a>
-        <a href="#sousCategorie" id="sousCategorie">Mug angel</a>
-      </div>
-      <div class="produitContainer">
-        <img
-          id="imgProduit"
-          src="/images/mug-angel.png"
-          alt="mug mug-ameriendien-1"
-        />
-        <div class="infoProduit">
-          <div class="produitData">
-            <h2 id="nameProduct">Mug Angel by EWS</h2>
-            <span><span id="priceProduct">15</span>€</span>
+      <div class="collectionsHome">
+        <a href="/produit/mugs/mug-ameriendien.html" class="">
+          <div class="soloCollection">
+            <img src="/images/mug-ameriendien-1.png" alt="mug Amériendien" />
           </div>
-          <p id="ficheProduit">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
-          </p>
-          <div class="quantity">
-            <span>Quantité :</span>
-            <span id="QuantityNumber">1</span>
-            <button id="lessQuantity">-</button>
-            <button id="moreQuantity">+</button>
-            <!-- <span
-              >Quantité :
-              <input
-                type="number"
-                name="produitQuantity"
-                id="produitQuantity"
-                value="0"
-                min="0"
-              />
-            </span> -->
+          <div class="info">
+            <h2>Mug Amériendien</h2>
+            <span id="prix">20€</span>
           </div>
-          <p id="exemplaires">
-            Il reste <span id="stock">15</span> exemplaires
-          </p>
-          <button id="ajoutPanier">Ajouter au panier</button>
-        </div>
+        </a>
+        <a href="/produit/mugs/mug-cat.html" class="">
+          <div class="soloCollection">
+            <img src="/images/mug-cat.png" alt="mug cat" />
+          </div>
+          <div class="info">
+            <h2>Mug chat</h2>
+            <span id="prix">20€</span>
+          </div>
+        </a>
+        <a href="/produit/mugs/mug-lion-mxiiia.html" class="">
+          <div class="soloCollection">
+            <img src="/images/mug-lion-mxiiia.png" alt="mug lion MXIIIA" />
+          </div>
+          <div class="info">
+            <h2>Mug MXIIIA</h2>
+            <span id="prix">20€</span>
+          </div>
+        </a>
+        <!-- <a href="#" class="">
+            <div class="soloCollection">
+              <img src="images/mug-ameriendien-1.png" alt="" />
+            </div>
+            <div class="info">
+              <h2>Mug Amériendien</h2>
+              <span id="prix">20€</span>
+            </div>
+          </a>
+          <a href="#" class="">
+            <div class="soloCollection">
+              <img src="images/mug-cat.png" alt="" />
+            </div>
+            <div class="info">
+              <h2>Mug chat</h2>
+              <span id="prix">20€</span>
+            </div>
+          </a>
+          <a href="#" class="">
+            <div class="soloCollection">
+              <img src="images/mug-lion-mxiiia.png" alt="" />
+            </div>
+            <div class="info">
+              <h2>Mug MXIIIA</h2>
+              <span id="prix">20€</span>
+            </div>
+          </a> -->
       </div>
     </main>
   </body>

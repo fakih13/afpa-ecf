@@ -8,10 +8,11 @@
       content="L'univers d'Angel par Eros World Society"
     />
     <link rel="stylesheet" href="/css/header.css" />
-    <link rel="stylesheet" href="/css/home.css" />
     <link rel="stylesheet" href="/css/userModal.css" />
+    <link rel="stylesheet" href="/css/inscription.css" />
     <script src="/js/header.js" defer></script>
     <script type="module" src="/js/modal.js" defer></script>
+    <script src="/js/inscription.js" defer></script>
     <title>Angel by EWS</title>
   </head>
   <body>
@@ -22,7 +23,7 @@
           <span></span>
           <span></span>
         </button>
-        <a href="index.html">
+        <a href="/index.html">
           <img
             id="logoAngel"
             src="/images/angel-1300048.svg"
@@ -44,10 +45,10 @@
           <li>Mugs</li>
         </ul>
       </div>
-      <form class="searchHighScreen" autocomplete="off">
+      <div class="searchHighScreen">
         <label for="search">Rechercher</label>
-        <input type="search" id="search"/>
-      </form>
+        <input type="text" id="search" />
+      </div>
       <!-- icons header -->
       <div class="icons">
         <img id="searchIcon" src="/images/search_icon.svg" alt="" srcset="" />
@@ -58,45 +59,64 @@
     </header>
 
     <!-- The Modal -->
-    <div id="myModal" class="modal">
+    <form id="myModal" class="modal" autocomplete="off">
       <!-- Modal content -->
-      <form class="modal-content">
+      <div class="modal-content">
         <div class="close">&times;</div>
         <h4>Connexion</h4>
         <p>Saissez votre email et votre mot de passe</p>
         <div class="inputContainer">
-          <input type="email" name="emailConnect" id="emailConnect" placeholder="Email" autocomplete="username">
-          <input type="password" name="passwordConnect" id="passwordConnect" placeholder="Mot de passe" autocomplete="current-password">
+          <input
+            type="email"
+            name="emailConnect"
+            id="emailConnect"
+            placeholder="Email"
+            autocomplete="off"
+          />
+          <input
+            type="password"
+            name="passwordConnect"
+            id="passwordConnect"
+            placeholder="Mot de passe"
+            autocomplete="off"
+          />
         </div>
         <button id="btnConnect">Se connecter</button>
-        <a href="inscription.html">Nouveau client? Créer un compte</a>
+        <a href="">Nouveau client? Créer un compte</a>
+      </div>
+    </form>
+    <main id="inscriptionPage">
+      <h1>Inscription</h1>
+      <h2>Remplissez le formulaire ci-dessous</h2>
+      <form action="" autocomplete="off" method="post">
+        <div class="inputContainer">
+          <input type="text" name="nom" id="nom" placeholder="Nom" />
+          <input type="text" name="prenom" id="prenom" placeholder="Prenom" />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            autocomplete="off"
+          />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Mot de passe"
+            autocomplete="off"
+          />
+          <input
+            type="password"
+            name="password2"
+            id="password2"
+            placeholder="Confirmer le mot de passe"
+            autocomplete="off"
+          />
+        </div>
+        <button id="btnValidate">S'inscrire</button>
       </form>
-    </div>
-    <main>
-      <div id="newProduct">
-        <h2>Nouveautés</h2>
-        <a id="collectionLink" href="#">Voir la collection</a>
-        <img id="newProductImg" src="images/mug-angel.png" alt="mug angel" />
-      </div>
-      <div class="collectionsHome">
-        <a href="/produit/mugs/mugs.html" class="soloCollection">
-          <img src="images/mug-ameriendien-1.png" alt="" />
-          <h3>Mugs</h3>
-        </a>
-        <a href="#" class="soloCollection">
-          <img src="images/mug-cat.png" alt="" />
-          <h3>Maillots</h3>
-        </a>
-        <a href="#" class="soloCollection">
-          <img src="images/mug-lion-mxiiia.png" alt="" />
-          <h3>T-shirt</h3>
-        </a>
-      </div>
-      <div class="legalAnnonce">
-        <img src="images/angel-1300048.svg" alt="logo EWS" />
-        <a href="#">conditions générales de ventes</a>
-        <a href="#">mentions légales</a>
-      </div>
+      <a href="connexion.html" id="connect">Déja client ? Se connecter</a>
     </main>
   </body>
 </html>
