@@ -6,13 +6,8 @@ main {
 }
 
 #titlePage {
-    margin-top: 80px;
+    margin-top: 20px;
     padding-left: 20vw;
-}
-
-.containerPanier {
-    margin-top: 60px;
-
 }
 
 .containerProduct {
@@ -21,6 +16,7 @@ main {
     align-items: center;
     justify-content: center;
     gap: 10px;
+    padding: 20px;
 }
 
 /* .containerInfo{
@@ -38,12 +34,14 @@ main {
     display: flex;
     align-items: center;
     gap: 60px;
+    justify-content: space-between;
 }
 
 .quantity {
     display: flex;
     align-items: center;
     gap: 60px;
+    justify-content: space-between;
 }
 
 .quantityContainer {
@@ -54,9 +52,7 @@ main {
 
 
 
-#delete {
-    margin-left: 10px;
-    display: block;
+.delete {
     color: #000;
 }
 
@@ -71,7 +67,7 @@ main {
     margin-left: 2px;
 }
 
-#sousTotal {
+.sousTotal {
     margin-top: 20px;
     padding-left: 20vw;
 }
@@ -101,7 +97,7 @@ main {
     text-decoration: line-through;
     font-weight: 600;
     margin: 0;
-    margin-top: 59px;
+    margin-top: 20px;
 }
 
 #ttc {
@@ -125,6 +121,13 @@ main {
     font-weight: 600;
 }
 
+#emptyCart{
+   text-align: center;
+   display: block;
+   margin-top: 60px;
+   font-weight: 900; 
+}
+
 @media screen and (min-width : 768px) {
     #titlePage {
         /* position: fixed;
@@ -134,15 +137,13 @@ main {
         padding-left: 30vw;
     }
     
-    #sousTotal {
+    .sousTotal {
         /* position: fixed;
         left: 30%; */
         padding-left: 30vw;
     }
 
-    .promo{
-        margin-top: 60px;
-    }
+    
     #imgProduct{
         max-width: 120px;
         max-height: 120px;
@@ -154,7 +155,7 @@ main {
     #titlePage{
         padding-left: 10vw;
     }
-    #sousTotal{
+    .sousTotal{
         padding-left: 10vw;
     }
 }

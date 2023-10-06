@@ -1,4 +1,4 @@
-class Panier {
+export class Panier {
   constructor(panier) {
     this.panier = panier;
   }
@@ -18,9 +18,3 @@ class Panier {
       window.sessionStorage.removeItem(this.panier);
   };
 }
-
-const recup = 'panier';
-
-const thePanier = new Panier(recup);
-
-thePanier.panierExist();

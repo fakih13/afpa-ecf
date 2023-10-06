@@ -1,3 +1,5 @@
+import { Panier } from './Cart.js';
+
 const buttonMenu = document.getElementById('buttonMenu');
 const listMenu = document.getElementById('listMenu');
 const closeMenu = document.getElementById('closeMenu');
@@ -30,3 +32,16 @@ if (window.sessionStorage.getItem('connect')) {
     window.location.href = '/index.html';
   });
 }
+
+const shopIcon = document.getElementById('shopIcon');
+
+
+shopIcon.addEventListener('click',()=>{
+  window.location.href = '/panier.html';
+})
+
+const recup = 'panier';
+
+const thePanier = new Panier(recup);
+
+thePanier.panierExist();

@@ -46,10 +46,12 @@ buttonPanier.addEventListener('click', () => {
   let index = vPanier.findIndex((e) => e.nom == produit.nom);
   // si le produit est dèjà présent faire un update
   if (index !== -1) {
-    vPanier[index].quantité = produit.quantité; 
+    vPanier[index].quantité = produit.quantité;
+    vPanier[index].prix = produit.prix; 
   } else {
     vPanier.push(produit);
   }
   sessionStorage.setItem('panier', JSON.stringify(vPanier));
-  window.location.href = '/panier.html';
+  //alert('produit ajouté dans le panier')
+  //window.location.href = '/panier.html';
 });

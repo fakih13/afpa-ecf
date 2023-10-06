@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/product.css" />
     <link rel="stylesheet" href="/css/header.css" />
-    <link rel="stylesheet" href="/css/panier.css">
-    <script src="/js/header.js" defer></script>
-    <script src="/js/cart.js" defer></script>
+    <link rel="stylesheet" href="/css/panier.css" />
+    <script type="module" src="/js/header.js" defer></script>
+    <script src="/js/panier.js" defer></script>
     <script type="module" src="/js/modal.js" defer></script>
     <title>Angel by EWS - Mug Angel</title>
   </head>
@@ -19,15 +19,28 @@
           <span></span>
           <span></span>
         </button>
-        <img
-          id="logoAngel"
-          src="/images/angel-1300048.svg"
-          alt="logo Angel par Eros World Society"
-        />
+        <a href="index.html">
+          <img
+            id="logoAngel"
+            src="/images/angel-1300048.svg"
+            alt="logo Angel par Eros World Society"
+          />
+        </a>
       </div>
       <div id="listMenu">
         <button id="closeMenu">X</button>
         <ul id="leMenu">
+          <!-- <li>T-shirt</li>
+          <li>
+            <a href="/produit/pending.html">
+              Maillot
+            </a>
+              <ul id="sousMenu">
+                <li>Rugby Marseille XIII Avenir</li>
+                <li>Sharks XIII</li>
+              </ul>
+          </li>
+          <li>Mugs</li> -->
           <li><a href="/produit/pending.html">T-shirt</a></li>
           <li>
             <a href="/produit/pending.html"> Maillot </a>
@@ -39,47 +52,35 @@
           <li><a href="/produit/mugs/mugs.html">Mugs</a></li>
         </ul>
       </div>
-      <div class="searchHighScreen">
+      <form class="searchHighScreen" autocomplete="off">
         <label for="search">Rechercher</label>
-        <input type="text" id="search" />
-      </div>
+        <input type="search" id="search" />
+      </form>
       <!-- icons header -->
       <div class="icons">
         <img id="searchIcon" src="/images/search_icon.svg" alt="" srcset="" />
         <img id="userIcon" src="/images/person_icon.svg" alt="" srcset="" />
         <img id="shopIcon" src="/images/shopping_icon.svg" alt="" srcset="" />
-        <img src="/images/logout.svg" alt="deconnexion" id="deconnexion">
+        <img src="/images/logout.svg" alt="deconnexion" id="deconnexion" />
       </div>
     </header>
-    <main>
-        <h2 id="titlePage">Panier</h2>
-        <div class="containerPanier">
-          <div class="containerProduct">
-            <img id="imgProduct" src="/images/mug-angel.png" alt="mug angel">
-            <div class="containerInfo">
-              <div class="info">
-                <h3 id="nameProduct">Mug Angel</h3>
-                <span id="priceProduct">15€</span>
-              </div>
-              <div class="quantity">
-                <div class="quantityContainer">
-                  <p>Quantité:</p>
-                  <span id="quantityProduct">1</span>
-                </div>
-                <a href="#delete" id="delete">supprimer</a>
-              </div>
-            </div>
-          </div>
-
-          <p id="sousTotal">Sous-total : 15€</p>
-          <div class="promo">
-            <p>Code promo:</p>
-            <input id="addPromo" type="text" placeholder="Un code promotionnel ?">
-          </div>
-          <p id="horsTaxe"> Total HT: <span id="prixHt">12€</span></p>
-          <p id="ttc"> Total HT: <span id="prixTtc">15€</span></p>
-          <button id="facturation">Facturation</button>
+    <main id="pagePanier">
+      <h2 id="titlePage">Panier</h2>
+      <div id="container">
+        <div id="containerPanier"></div>
+        <p class="sousTotal">Sous-total : <span id="sousTotalValue"></span>€</p>
+        <div class="promo">
+          <p>Code promo:</p>
+          <input
+            id="addPromo"
+            type="text"
+            placeholder="Un code promotionnel ?"
+          />
         </div>
+        <p id="horsTaxe">Total HT: <span id="prixHt"></span>€</p>
+        <p id="ttc">Total HT: <span id="prixTtc"></span>€</p>
+        <button id="facturation">Facturation</button>
+      </div>
     </main>
   </body>
 </html>
