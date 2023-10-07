@@ -98,3 +98,55 @@ input::-webkit-inner-spin-button {
     }
 }
 
+
+
+#modal {
+    background-color: #e7e7e789;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+#modalContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 10px;
+    padding-bottom: 16px;
+    border: 1px solid #888;
+    width: 280px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+#modalMessage{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+#imgModal{
+    width: 50%;
+}
+
+#ButtonGoCart{
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: rgb(109, 109, 109);
+    color: #fff;
+    text-decoration: none;
+}
+
+#modalName{
+    font-size: 1em;
+    font-weight: 600;
+}

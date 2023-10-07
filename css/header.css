@@ -40,8 +40,9 @@ header .menu #logoAngel:hover {
     cursor: pointer;
 }
 
-ul{
+header ul{
     list-style: none;
+    text-decoration: none;
 }
 
 header #listMenu {
@@ -75,7 +76,12 @@ header #listMenu>#leMenu>li {
     font-size: 5rem;
     padding-bottom: 6px;
     margin-bottom: 6px;
-    
+}
+
+
+header #leMenu a{
+    text-decoration: none;
+    color: #4f4f4f;
 }
 
 header .sousMenu{

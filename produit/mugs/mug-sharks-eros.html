@@ -43,7 +43,7 @@
       </div>
       <form class="searchHighScreen" autocomplete="off">
         <label for="search">Rechercher</label>
-        <input type="search" id="search" />
+        <input type="text" id="search" />
       </form>
       <!-- icons header -->
       <div class="icons">
@@ -83,19 +83,18 @@
     </div>
     <main>
       <div class="navigation">
-        <a href="#categorie" id="categorie">Mug</a>
-        <a href="#sousCategorie" id="sousCategorie">Mug angel</a>
+        <a href="/produit/mugs/mugs.html" id="categorie">Mug</a>
       </div>
       <div class="produitContainer">
         <img
-        id="imgProduit"
-        src="/images/mug-angel.png"
-          alt="mug mug-ameriendien-1"
+          id="imgProduit"
+          src="/images/mug-sharks-eros.png"
+          alt="mug Sharks Eros"
         />
         <div class="infoProduit">
           <div class="produitData">
-            <h2 id="nameProduct">Mug Angel by EWS</h2>
-            <span><span id="priceProduct">15</span>€</span>
+            <h2 id="nameProduct">Mug Sharks Eros</h2>
+            <span><span id="priceProduct">20</span>€</span>
           </div>
           <p id="ficheProduit">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -110,23 +109,23 @@
             <span id="QuantityNumber">1</span>
             <button id="lessQuantity">-</button>
             <button id="moreQuantity">+</button>
-            </div>
-            <p id="exemplaires">
-              Il reste <span id="stock">15</span> exemplaires
+            <!-- <span
+              >Quantité :
+              <input
+                type="number"
+                name="produitQuantity"
+                id="produitQuantity"
+                value="0"
+                min="0"
+              />
+            </span> -->
+          </div>
+          <p id="exemplaires">
+            Il reste <span id="stock">15</span> exemplaires
           </p>
           <button id="ajoutPanier">Ajouter au panier</button>
         </div>
       </div>
-      <!-- <div id="modal">
-        <div id="modalContent">
-          <p id="modalMessage">Ajouté au panier</p>
-          <p id="modalName">Mug test</p>
-          <img id="imgModal" src="/images/mug-angel.png" alt="Mug test">
-          <p id="prixModal">40€</p>
-          <p id="modalQuantite">2 articles</p>
-          <a href="#" id="ButtonGoCart">Aller au panier</a>
-        </div>
-      </div> -->
     </main>
   </body>
-  </html>
+</html>

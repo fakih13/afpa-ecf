@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="header.css" />
-    <link rel="stylesheet" href="paiement.css" />
-    <script type="module" src="header.js" defer></script>
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/paiement.css" />
+    <script type="module" src="/js/header.js" defer></script>
+    <script src="/js/paiement.js" defer></script>
     <title>Angel by EWS - Mug Angel</title>
   </head>
   <body>
@@ -45,10 +46,10 @@
         <img id="searchIcon" src="/images/search_icon.svg" alt="" srcset="" />
         <img id="userIcon" src="/images/person_icon.svg" alt="" srcset="" />
         <img id="shopIcon" src="/images/shopping_icon.svg" alt="" srcset="" />
-        <img src="/images/logout.svg" alt="deconnexion" id="deconnexion">
+        <img src="/images/logout.svg" alt="deconnexion" id="deconnexion" />
       </div>
     </header>
-    <main>
+    <main id="paiementPage">
       <div class="container">
         <h2 id="titlePage">Paiement</h2>
         <div class="infoContainer">
@@ -75,25 +76,11 @@
             </div>
           </div>
         </div>
-        <p>Paiement : <span id="PrixTotal">15€</span></p>
+        <p>Paiement : <span id="prixTotal"></span>€</p>
         <button id="confirmButton">valider</button>
-        
       </div>
-      <h4>Votre Commande</h4>
-      <div class="containerProduct">
-        <img id="imgProduct" src="/images/mug-angel.png" alt="mug angel" />
-        <div class="containerInfo">
-          <div class="info">
-            <h3 id="nameProduct">Mug Angel</h3>
-            <span id="priceProduct">15€</span>
-          </div>
-          <div class="quantity">
-            <div class="quantityContainer">
-              <p>Quantité:</p>
-              <span id="quantityProduct">1</span>
-            </div>
-          </div>
-        </div>
+      <div id="rappelCommande">
+        <h4 id="commande">Votre Commande</h4>
       </div>
     </main>
   </body>

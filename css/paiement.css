@@ -1,6 +1,11 @@
 * {
     font-family: 'Inter', sans-serif;
 }
+
+#paiementPage{
+    display: none;
+}
+
 .container {
     margin-top: 90px;
     display: flex;
@@ -110,9 +115,7 @@ p{
     font-weight: 600;
 }
 
-h4{
-    margin-left: 10vw;
-}
+
 
 @media screen and (max-width : 348px) {
     .info{
@@ -129,18 +132,25 @@ h4{
         margin-right: 10px;
     }
     main{
-        display: flex;
+        display: flex !important;
         justify-content: center;
         align-items: center;
-    }
-    h4{
-        position: absolute;
-        display: block;
-        left: 50%;
-        top: 18%;
-        margin-left: 0;
     }
     #titlePage{
         margin-left: 0;
     }
+    #rappelCommande{
+        margin-left: 60px;
+    }
+}
+
+#rappelCommande h4{
+    align-self: center;
+}
+
+#rappelCommande{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
 }

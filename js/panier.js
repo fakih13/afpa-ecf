@@ -1,8 +1,9 @@
 // faire une boucle des produit dans le sessionStroge pour afficher les informations
 
-function produit(img, h3, price, theQuantity) {
+function produit(img, h3, price, theQuantity,lien) {
   let containerPanier = document.getElementById('containerPanier');
-  let containerProduct = document.createElement('div');
+  let containerProduct = document.createElement('a');
+  containerProduct.setAttribute('href', lien)
   containerProduct.classList.add('containerProduct');
   let imgProduct = document.createElement('img');
   imgProduct.setAttribute('src', img);
@@ -27,8 +28,7 @@ function produit(img, h3, price, theQuantity) {
   let quantityProduct = document.createElement('span');
   quantityProduct.textContent = theQuantity;
   quantityProduct.setAttribute('id', 'quantityProduct');
-  let deleteProduct = document.createElement('a');
-  deleteProduct.setAttribute('href', '#');
+  let deleteProduct = document.createElement('button');
   deleteProduct.setAttribute('class', 'delete');
   deleteProduct.textContent = 'supprimer';
 
@@ -45,12 +45,8 @@ function produit(img, h3, price, theQuantity) {
   containerPanier.appendChild(containerProduct);
 }
 
-const img = '/images/mug-angel.png';
-
 const sessionPanier = window.sessionStorage.getItem('panier');
 let panier = JSON.parse(sessionPanier);
-
-
 
 // faire une boucle pour calculer le prix des produit
 
@@ -67,72 +63,56 @@ function prixDuPanier(panier) {
   prixTtc.textContent = value * 0.2 + value;
 }
 
+function panierVide() {
+  const main = document.getElementById('pagePanier');
+  const p = document.createElement('p');
+  p.setAttribute('id', 'emptyCart');
+  p.textContent = 'Votre panier est vide';
+  main.appendChild(p);
+  container.style.display = 'none';
+  console.log(panier.length)
+}
+
 function getPanier() {
+  const container = document.getElementById('container');
   if (panier.length !== 0) {
-    /*let sousTotal = document.getElementById('sousTotalValue');
-    let prixHt = document.getElementById('prixHt');
-    let prixTtc = document.getElementById('prixTtc');
-    let value = 0;
+    container.style.display = 'block';
+    prixDuPanier(panier);
     for (let i = 0; i < panier.length; i++) {
-      produit(img, panier[i].nom, panier[i].prix, panier[i].quantité);
-      value += panier[i].prix;
-    }
-    sousTotal.textContent = value;
-    prixHt.textContent = value;
-    prixTtc.textContent = value * 0.2 + value;*/
-    prixDuPanier(panier)
-    for (let i = 0; i < panier.length; i++) {
-      produit(img, panier[i].nom, panier[i].prix, panier[i].quantité);
+      produit(panier[i].img, panier[i].nom, panier[i].prix, panier[i].quantité, panier[i].lien);
     }
   } else {
-    const container = document.getElementById('container');
-    container.style.display = 'none';
-    const main = document.getElementById('pagePanier');
-    const p = document.createElement('p');
-    p.setAttribute('id', 'emptyCart');
-    p.textContent = 'Votre panier est vide';
-    main.appendChild(p);
+    panierVide();
   }
 }
 
-getPanier();
 // faire une fonction pour supprmier un produit du panier
 
 function attachDeleteEventListeners() {
-  // je récupère tout les liens pôur supprimer le produit du panier
-  let deleteProduct = document.getElementsByClassName('delete');
+  let containerPanier = document.getElementById('containerPanier');
 
-  for (let i = 0; i < deleteProduct.length; i++) {
-    deleteProduct[i].addEventListener('click', () => {
-      // j'initialise la variable pour le nom du produit
+  containerPanier.addEventListener('click', (event) => {
+    if (event.target.classList.contains('delete')) {
+      event.preventDefault();
       let productName;
-      // je prends l'éléments parent qui tient toutes les infos du produit
-      let removeProduct = deleteProduct[i].closest('.containerProduct');
-      // j'initalise la variable qui va contentir le nom du produit
+      let removeProduct = event.target.closest('.containerProduct');
       let deleteProductName = removeProduct.getElementsByTagName('h3');
       for (let i = 0; i < deleteProductName.length; i++) {
-        // j'attribue le nom du produit dans la variable
         productName = deleteProductName[i].textContent;
       }
-      // clonne le pnaier d'origine
-      let clonedPanier = [...panier];
-      // je cherche par le nom le produit dans la tableau de panier cloner
-      let index = clonedPanier.findIndex((e) => e.nom == productName);
+      let index = panier.findIndex((e) => e.nom == productName);
       if (index !== -1) {
-        // supprime
-        clonedPanier.splice(index, 1);
-        // supprime l'élément du dom
+        panier.splice(index, 1);
         removeProduct.remove();
-        panier = clonedPanier; // met à jour le panier d'origine avec les nouvelles valeurs
-        prixDuPanier(panier)
+        prixDuPanier(panier);
         window.sessionStorage.setItem('panier', JSON.stringify(panier));
-      } else {
-        console.log('bug ici ' + index);
       }
-      console.log(panier);
-      attachDeleteEventListeners();
-    });
-  }
+      if (panier.length == 0) {
+        panierVide()
+      }
+    }
+  });
 }
-attachDeleteEventListeners();
 
+getPanier();
+attachDeleteEventListeners();
